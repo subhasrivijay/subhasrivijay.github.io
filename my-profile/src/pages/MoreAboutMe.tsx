@@ -1,7 +1,16 @@
+import type { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from "react";
 import BackToHomeButton from "../components/BackToHomeButton";
 
 // Helper for bullet-style cards
-function FeatureCard({ emoji, title, bullets, img, imgAlt }) {
+type FeatureCardProps = {
+    title: string;
+    bullets: React.ReactNode[]; // allows bullet items to be strings or JSX (like bold or anchor tags)
+    img: string;
+    imgAlt: string;
+    emoji?: string; // if you want to support emoji as a prop, and it's optional
+  };
+  
+  function FeatureCard({ title, bullets, img, imgAlt, emoji }: FeatureCardProps) {
   return (
     <div
       style={{
@@ -52,7 +61,7 @@ function FeatureCard({ emoji, title, bullets, img, imgAlt }) {
         </div>
         {/* Bullets */}
         <ul style={{ fontSize: "1.08rem", color: "#374151", lineHeight: 1.53, margin: "0.7em 0 0 0.2em", paddingLeft: "1.2em" }}>
-          {bullets.map((point, idx) => (
+          {bullets.map((point: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined, idx: Key | null | undefined) => (
             <li key={idx} style={{marginBottom: "0.45em"}}>{point}</li>
           ))}
         </ul>
