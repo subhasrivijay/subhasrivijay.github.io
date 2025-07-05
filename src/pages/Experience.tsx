@@ -72,7 +72,7 @@ export default function Experience() {
             }}
           >
             <img
-              src="/public/wilmer_eye_logo.jpg"
+              src="/wilmer_eye_logo.jpg"
               alt="Wilmer Eye Institute"
               style={{
                 maxWidth: "230px",
@@ -144,7 +144,7 @@ export default function Experience() {
             }}
           >
             <img
-              src="/public/RR.jpg"
+              src="/RR.jpg"
               alt="RescueReady"
               style={{
                 maxWidth: "230px",
@@ -213,7 +213,7 @@ export default function Experience() {
             }}
           >
             <img
-              src="/public/ISBI2025.jpg"
+              src="/ISBI2025.jpg"
               alt="ISBI 2025 Poster"
               style={{
                 maxWidth: "230px",
@@ -226,7 +226,7 @@ export default function Experience() {
               }}
             />
             <img
-              src="/public/Present.jpg"
+              src="/Present.jpg"
               alt="Presenting"
               style={{
                 maxWidth: "230px",
@@ -280,7 +280,7 @@ export default function Experience() {
             }}
           >
             <img
-              src="/public/TA.jpg"
+              src="/TA.jpg"
               alt="Teaching Assistant"
               style={{
                 maxWidth: "230px",

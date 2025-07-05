@@ -1,5 +1,5 @@
 import BackToHomeButton from "../components/BackToHomeButton";
-const resumePdfUrl = "/assets/RESUME _SUBHASRI_VIJAY.pdf"; // Place your PDF in public/
+const resumePdfUrl = "/assets/RESUME _SUBHASRI_VIJAY.pdf"; // Place your PDF in /
 
 export default function Resume() {
   return (
@@ -16,7 +16,7 @@ export default function Resume() {
       }}
     >
       <img
-        src="/public/new.jpg"
+        src="//new.jpg"
         alt="Subhasri Vijay"
         style={{
           width: "120px",

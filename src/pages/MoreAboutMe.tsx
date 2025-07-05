@@ -169,7 +169,7 @@ export default function MoreAboutMe() {
             "Love capturing moments that blend natural light and genuine emotion.",
             "Document daily life and meaningful stories.",
           ]}
-          img="/public/Photograph.jpg"
+          img="//Photograph.jpg"
           imgAlt="Photography"
         />
 
@@ -181,7 +181,7 @@ export default function MoreAboutMe() {
             "Project focused on empathy and research-driven solutions.",
             "One of my proudest international academic experiences."
           ]}
-          img="/public/nus.jpg"
+          img="//nus.jpg"
           imgAlt="NUS Singapore"
         />
 
@@ -194,7 +194,7 @@ export default function MoreAboutMe() {
             "Employ advanced tools: Big Shot, punchers, embossers.",
             "Mix inking, 3D texturing, and lifelike details."
           ]}
-          img="/public/Craft.jpg"
+          img="//Craft.jpg"
           imgAlt="Craft Pieces"
         />
 
@@ -206,7 +206,7 @@ export default function MoreAboutMe() {
             "Enjoy focus, movement, and balance outside the classroom.",
             "Value the community and healthy competition."
           ]}
-          img="/public/tennis_skate.jpg"
+          img="//tennis_skate.jpg"
           imgAlt="Tennis and Skating"
         />
 
