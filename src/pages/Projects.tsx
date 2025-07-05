@@ -46,7 +46,7 @@ export default function Projects() {
               </li>
               <li>
                 <a
-                  href="/assets/RescueReady.png"
+                  href="/public/RescueReady.png"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: "#2563eb", textDecoration: "underline", fontWeight: 500 }}
@@ -70,7 +70,7 @@ export default function Projects() {
 
           }}>
             <img
-              src="/assets/RR.jpg"
+              src="/public/RR.jpg"
               alt="RescueReady Logo"
               style={{
                 maxWidth: "320px",   // Make this as big as you like!
@@ -124,7 +124,7 @@ export default function Projects() {
             padding: "2.5rem 2rem"
           }}>
             <img
-              src="/assets/Imazer.jpg"
+              src="/public/Imazer.jpg"
               alt="IMAZER Screenshot"
               style={{
                 maxWidth: "420px",
@@ -174,7 +174,7 @@ export default function Projects() {
             padding: "2.5rem 2rem"
           }}>
             <img
-              src="/assets/careathon.jpg"
+              src="/public/careathon.jpg"
               alt="CAREATHON Screenshot"
               style={{
                 maxWidth: "390px",

@@ -16,7 +16,7 @@ export default function Resume() {
       }}
     >
       <img
-        src="/assets/new.jpg"
+        src="/public/new.jpg"
         alt="Subhasri Vijay"
         style={{
           width: "120px",
