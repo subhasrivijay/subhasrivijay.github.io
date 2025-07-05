@@ -3,6 +3,19 @@ import { useNavigate } from 'react-router-dom';
 export default function Home() {
   const navigate = useNavigate();
 
+  // // Add your announcements here!
+  // const announcements = [
+  //   {
+  //     date: "2024-06-08",
+  //     text: 'Portfolio site launched! 🚀',
+  //   },
+  //   {
+  //     date: "2024-05-20",
+  //     text: 'Presented research at JHU student research symposium.',
+  //   },
+  //   // Add more as needed...
+  // ];
+
   const menuItems = [
     { label: 'Projects', path: '/projects', emoji: '🛠️' },
     { label: 'Resume', path: '/resume', emoji: '📄' },
@@ -23,7 +36,6 @@ export default function Home() {
         overflow: "hidden",
       }}
     >
-      {/* Keyframes for animated emoji */}
       <style>
         {`
         @keyframes wavingHand {
@@ -89,24 +101,24 @@ export default function Home() {
           </span>
         </h1>
         <div
-  style={{
-    fontSize: "1.08rem",
-    color: "#6366f1",
-    fontWeight: 700,
-    margin: "1.15rem 0 1.1rem 0",
-    letterSpacing: ".01em",
-    lineHeight: "1.35"
-  }}
->
-  MSE CS Student at Johns Hopkins University <span style={{color:'#0ea5e9'}}> | </span>
-  Student Research Assistant <span style={{color:'#0ea5e9'}}> | </span>
-  Head Course Assistant <span style={{color:'#0ea5e9'}}> | </span>
-  Masson Fellow
-  <br/>
-  <span style={{color:'#a78bfa', fontWeight:600}}>
-    Transforming Ideas into Impactful Solutions for the Future
-  </span>
-</div>
+          style={{
+            fontSize: "1.08rem",
+            color: "#6366f1",
+            fontWeight: 700,
+            margin: "1.15rem 0 1.1rem 0",
+            letterSpacing: ".01em",
+            lineHeight: "1.35"
+          }}
+        >
+          MSE CS Student at Johns Hopkins University <span style={{color:'#0ea5e9'}}> | </span>
+          Student Research Assistant <span style={{color:'#0ea5e9'}}> | </span>
+          Head Course Assistant <span style={{color:'#0ea5e9'}}> | </span>
+          Masson Fellow
+          <br/>
+          <span style={{color:'#a78bfa', fontWeight:600}}>
+            Transforming Ideas into Impactful Solutions for the Future
+          </span>
+        </div>
 
         <div
           style={{
@@ -153,6 +165,53 @@ export default function Home() {
             </button>
           ))}
         </div>
+
+        {/* --- Recent Announcements BELOW buttons ---
+        <div
+          style={{
+            width: '100%',
+            background: "rgba(236,239,255,0.92)",
+            borderRadius: 18,
+            padding: '1rem 1.2rem 1.1rem 1.2rem',
+            margin: '2rem 0 0 0',
+            boxShadow: '0 2px 12px #6366f138',
+            border: '1.5px solid #a5b4fc',
+            textAlign: 'left',
+            maxWidth: 400,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          }}
+        >
+          <div
+            style={{
+              fontSize: '1.13rem',
+              fontWeight: 700,
+              color: '#3730a3',
+              marginBottom: '.55rem',
+              letterSpacing: '.01em',
+            }}
+          >
+            📢 Recent Announcements:
+          </div>
+          <ul
+            style={{
+              margin: 0,
+              paddingLeft: '1.3em',
+              color: '#312e81',
+              fontSize: '1rem',
+              listStyle: 'disc'
+            }}> */}
+            {/* {announcements.map((a, idx) => (
+              <li key={idx} style={{ marginBottom: '.22em', lineHeight: 1.5 }}>
+                <span style={{ fontWeight: 600, color: '#6366f1', marginRight: '.45em', fontSize: '.96em' }}>
+                  {a.date}:
+                </span>
+                {a.text}
+              </li>
+            ))} */}
+          {/* </ul> */}
+        {/* </div> */}
+
       </div>
     </div>
   );
