@@ -206,7 +206,7 @@ export default function MoreAboutMe() {
             "Enjoy focus, movement, and balance outside the classroom.",
             "Value the community and healthy competition."
           ]}
-          img="/tennis_skate.jpg"
+          img="/Skating.jpg"
           imgAlt="Tennis and Skating"
         />
 
