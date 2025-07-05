@@ -86,80 +86,7 @@ export default function Experience() {
             />
           </div>
         </div>
-
-        {/* RescueReady */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            background: "rgba(255,255,255,0.21)",
-            borderRadius: "20px",
-            boxShadow: "0 6px 24px #6366f119",
-            overflow: "hidden",
-            marginTop: "2.5rem",
-            gap: "2.5rem"
-          }}
-        >
-          <div style={{ flex: 1, padding: "2.5rem 2rem" }}>
-            <div style={{ fontSize: "1.45rem", fontWeight: 700 }}>
-              Co-Founder
-            </div>
-            <div style={{ fontWeight: 500, color: "#573fe1", marginBottom: 4 }}>
-              RescueReady{" "}
-              <span
-                style={{
-                  float: "right",
-                  color: "#3d4251",
-                  fontWeight: 400,
-                  fontSize: "1rem",
-                }}
-              >
-                January 2025–Present
-              </span>
-            </div>
-            <ul
-              style={{
-                fontSize: "1.09rem",
-                color: "#222a35",
-                lineHeight: 1.72,
-                margin: 0,
-                paddingLeft: 23,
-              }}
-            >
-              <li>
-                Developed an AI-powered EMT training platform simulating real scenarios and clinical decision making.
-              </li>
-              <li>
-                Built a full-stack app with React, TypeScript, SQLite and generative AI in collaboration with EMT professionals.
-              </li>
-            </ul>
-          </div>
-          <div
-            style={{
-              minWidth: "230px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "2.5rem 2rem",
-            }}
-          >
-            <img
-              src="/RR.jpg"
-              alt="RescueReady"
-              style={{
-                maxWidth: "230px",
-                width: "100%",
-                height: "auto",
-                borderRadius: "15px",
-                boxShadow: "0 6px 24px #4f46e533",
-                objectFit: "contain",
-                border: "3px solid #6366f1",
-              }}
-            />
-          </div>
-        </div>
-
-        {/* Posters & Publications */}
+         {/* Posters & Publications */}
         <div
           style={{
             display: "flex",
@@ -240,7 +167,79 @@ export default function Experience() {
             />
           </div>
         </div>
+        {/* RescueReady */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
+            background: "rgba(255,255,255,0.21)",
+            borderRadius: "20px",
+            boxShadow: "0 6px 24px #6366f119",
+            overflow: "hidden",
+            marginTop: "2.5rem",
+            gap: "2.5rem"
+          }}
+        >
+          <div style={{ flex: 1, padding: "2.5rem 2rem" }}>
+            <div style={{ fontSize: "1.45rem", fontWeight: 700 }}>
+              Co-Founder
+            </div>
+            <div style={{ fontWeight: 500, color: "#573fe1", marginBottom: 4 }}>
+              RescueReady{" "}
+              <span
+                style={{
+                  float: "right",
+                  color: "#3d4251",
+                  fontWeight: 400,
+                  fontSize: "1rem",
+                }}
+              >
+                January 2025–Present
+              </span>
+            </div>
+            <ul
+              style={{
+                fontSize: "1.09rem",
+                color: "#222a35",
+                lineHeight: 1.72,
+                margin: 0,
+                paddingLeft: 23,
+              }}
+            >
+              <li>
+                Developed an AI-powered EMT training platform simulating real scenarios and clinical decision making.
+              </li>
+              <li>
+                Built a full-stack app with React, TypeScript, SQLite and generative AI in collaboration with EMT professionals.
+              </li>
+            </ul>
+          </div>
+          <div
+            style={{
+              minWidth: "230px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "2.5rem 2rem",
+            }}
+          >
+            <img
+              src="/RR.jpg"
+              alt="RescueReady"
+              style={{
+                maxWidth: "230px",
+                width: "100%",
+                height: "auto",
+                borderRadius: "15px",
+                boxShadow: "0 6px 24px #4f46e533",
+                objectFit: "contain",
+                border: "3px solid #6366f1",
+              }}
+            />
+          </div>
+        </div>
 
+       
         {/* Teaching Experience */}
         <div
           style={{
