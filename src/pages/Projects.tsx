@@ -70,7 +70,7 @@ export default function Projects() {
 
           }}>
             <img
-              src="//RR.jpg"
+              src="/RR.jpg"
               alt="RescueReady Logo"
               style={{
                 maxWidth: "320px",   // Make this as big as you like!
@@ -124,7 +124,7 @@ export default function Projects() {
             padding: "2.5rem 2rem"
           }}>
             <img
-              src="//Imazer.jpg"
+              src="/Imazer.jpg"
               alt="IMAZER Screenshot"
               style={{
                 maxWidth: "420px",
@@ -174,7 +174,7 @@ export default function Projects() {
             padding: "2.5rem 2rem"
           }}>
             <img
-              src="//careathon.jpg"
+              src="/careathon.jpg"
               alt="CAREATHON Screenshot"
               style={{
                 maxWidth: "390px",

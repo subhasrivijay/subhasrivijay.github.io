@@ -53,7 +53,7 @@ export default function Home() {
         }}
       >
         <img
-          src="//new.jpg"
+          src="/new.jpg"
           alt="Subhasri Vijay"
           style={{
             boxShadow: "0 8px 24px rgba(37,99,235,0.16)",
