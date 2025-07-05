@@ -174,7 +174,7 @@ export default function Projects() {
             padding: "2.5rem 2rem"
           }}>
             <img
-              src="/careathon.jpg"
+              src="/Careathon.jpg"
               alt="CAREATHON Screenshot"
               style={{
                 maxWidth: "390px",
