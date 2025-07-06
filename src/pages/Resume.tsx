@@ -1,5 +1,5 @@
 import BackToHomeButton from "../components/BackToHomeButton";
-const resumePdfUrl = "/RESUME_SUBHASRI_VIJAY.pdf"; // Place your PDF in /
+const resumePdfUrl = `${import.meta.env.BASE_URL}RESUME_SUBHASRI_VIJAY.pdf`;
 
 export default function Resume() {
   return (
