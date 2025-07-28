@@ -1,56 +1,22 @@
 import BackToHomeButton from "../components/BackToHomeButton";
+import styles from './Experience.module.css';
 
 export default function Experience() {
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        padding: "3rem 0",
-        background: "linear-gradient(135deg, #dbdbe6 0%, #b7e5f8 100%)",
-      }}
-    >
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "2rem" }}>
-
+    <div className={styles.container}>
+      <div className={styles.innerContainer}>
 
         {/* Cataract Research Assistant */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            background: "rgba(255,255,255,0.21)",
-            borderRadius: "20px",
-            boxShadow: "0 6px 24px #6366f119",
-            overflow: "hidden",
-            marginTop: "2rem",
-            gap: "2.5rem"
-          }}
-        >
-          <div style={{ flex: 1, padding: "2.5rem 2rem" }}>
-            <div style={{ fontSize: "1.45rem", fontWeight: 700 }}>
+        <div className={styles.expSection}>
+          <div className={styles.expDetails}>
+            <div className={styles.title}>
               Cataract Research Assistant
             </div>
-            <div style={{ fontWeight: 500, color: "#573fe1", marginBottom: 4 }}>
-              Wilmer Eye Institute{" "}
-              <span
-                style={{
-                  float: "right",
-                  color: "#3d4251",
-                  fontWeight: 400,
-                  fontSize: "1rem",
-                }}
-              >
-                January 2022–Present
-              </span>
+            <div className={styles.subtitle}>
+              Wilmer Eye Institute
+              <span className={styles.duration}>January 2022–Present</span>
             </div>
-            <ul
-              style={{
-                fontSize: "1.09rem",
-                color: "#222a35",
-                lineHeight: 1.72,
-                margin: 0,
-                paddingLeft: 23,
-              }}
-            >
+            <ul className={styles.expList}>
               <li>
                 Created and analyzed ground-truths for “Who is the expert surgeon?” Presented at AUPO 2024.
               </li>
@@ -62,63 +28,22 @@ export default function Experience() {
               </li>
             </ul>
           </div>
-          <div
-            style={{
-              minWidth: "230px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "2.5rem 2rem",
-            }}
-          >
+          <div className={styles.expImageContainer}>
             <img
               src="/wilmer_eye_logo.jpg"
               alt="Wilmer Eye Institute"
-              style={{
-                maxWidth: "230px",
-                width: "100%",
-                height: "auto",
-                borderRadius: "15px",
-                boxShadow: "0 6px 24px #4f46e533",
-                objectFit: "contain",
-                border: "3px solid #6366f1",
-              }}
+              className={styles.expImage}
             />
           </div>
         </div>
-         {/* Posters & Publications */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            background: "rgba(255,255,255,0.21)",
-            borderRadius: 20,
-            boxShadow: "0 6px 24px #6366f119",
-            padding: "2rem",
-            marginTop: "2.5rem",
-            gap: "2.5rem"
-          }}
-        >
+
+        {/* Posters & Publications */}
+        <div className={`${styles.expSection} ${styles.second}`}>
           <div style={{ flex: 1 }}>
-            <div
-              style={{
-                fontSize: "1.33rem",
-                fontWeight: 700,
-                color: "#222",
-                marginBottom: 8,
-              }}
-            >
+            <div className={styles.posterTitle}>
               Posters & Publications
             </div>
-            <ul
-              style={{
-                fontSize: "1.08rem",
-                color: "#363653",
-                lineHeight: 1.67,
-                margin: 0,
-                paddingLeft: 23,
-              }}
-            >
+            <ul className={styles.posterList}>
               <li>
                 Poster: “Can AI accurately answer: Who is the expert surgeon?” at AUPO 2024.
               </li>
@@ -130,82 +55,31 @@ export default function Experience() {
               </li>
             </ul>
           </div>
-          <div
-            style={{
-              minWidth: "230px",
-              display: "flex",
-              flexDirection: "column",
-              gap: "16px",
-              alignItems: "center",
-            }}
-          >
+          <div className={styles.posterImages}>
             <img
               src="/ISBI2025.jpg"
               alt="ISBI 2025 Poster"
-              style={{
-                maxWidth: "230px",
-                width: "100%",
-                height: "auto",
-                borderRadius: "15px",
-                boxShadow: "0 6px 24px #4f46e533",
-                objectFit: "contain",
-                border: "3px solid #6366f1",
-              }}
+              className={styles.expImage}
             />
             <img
               src="/Present.jpg"
               alt="Presenting"
-              style={{
-                maxWidth: "230px",
-                width: "100%",
-                height: "auto",
-                borderRadius: "15px",
-                boxShadow: "0 6px 24px #4f46e533",
-                objectFit: "contain",
-                border: "3px solid #6366f1",
-              }}
+              className={styles.expImage}
             />
           </div>
         </div>
+
         {/* RescueReady */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            background: "rgba(255,255,255,0.21)",
-            borderRadius: "20px",
-            boxShadow: "0 6px 24px #6366f119",
-            overflow: "hidden",
-            marginTop: "2.5rem",
-            gap: "2.5rem"
-          }}
-        >
-          <div style={{ flex: 1, padding: "2.5rem 2rem" }}>
-            <div style={{ fontSize: "1.45rem", fontWeight: 700 }}>
+        <div className={`${styles.expSection} ${styles.extraMargin}`}>
+          <div className={styles.expDetails}>
+            <div className={styles.title}>
               Co-Founder
             </div>
-            <div style={{ fontWeight: 500, color: "#573fe1", marginBottom: 4 }}>
+            <div className={styles.subtitle}>
               RescueReady{" "}
-              <span
-                style={{
-                  float: "right",
-                  color: "#3d4251",
-                  fontWeight: 400,
-                  fontSize: "1rem",
-                }}
-              >
-                January 2025–Present
-              </span>
+              <span className={styles.duration}>January 2025–Present</span>
             </div>
-            <ul
-              style={{
-                fontSize: "1.09rem",
-                color: "#222a35",
-                lineHeight: 1.72,
-                margin: 0,
-                paddingLeft: 23,
-              }}
-            >
+            <ul className={styles.expList}>
               <li>
                 Developed an AI-powered EMT training platform simulating real scenarios and clinical decision making.
               </li>
@@ -214,51 +88,23 @@ export default function Experience() {
               </li>
             </ul>
           </div>
-          <div
-            style={{
-              minWidth: "230px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "2.5rem 2rem",
-            }}
-          >
+          <div className={styles.expImageContainer}>
             <img
               src="/RR.jpg"
               alt="RescueReady"
-              style={{
-                maxWidth: "230px",
-                width: "100%",
-                height: "auto",
-                borderRadius: "15px",
-                boxShadow: "0 6px 24px #4f46e533",
-                objectFit: "contain",
-                border: "3px solid #6366f1",
-              }}
+              className={styles.expImage}
             />
           </div>
         </div>
 
-       
         {/* Teaching Experience */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            background: "rgba(255,255,255,0.21)",
-            borderRadius: 20,
-            boxShadow: "0 6px 24px #6366f119",
-            padding: "2rem",
-            marginTop: "2.5rem",
-            gap: "2.5rem"
-          }}
-        >
-          <div style={{ flex: 1 }}>
-            <div style={{ fontSize: "1.33rem", fontWeight: 700, color: "#222", marginBottom: 2 }}>
+        <div className={styles.taSection}>
+          <div className={styles.taDetails}>
+            <div className={styles.taTitle}>
               Head Teaching Assistant
-              <span style={{ float: "right", color: "#3d4251", fontWeight: 400, fontSize: "1rem" }}>EN.601.226 | February 2024–Present</span>
+              <span className={styles.duration}>EN.601.226 | February 2024–Present</span>
             </div>
-            <ul style={{ fontSize: "1.08rem", color: "#363653", lineHeight: 1.67, margin: 0, paddingLeft: 23 }}>
+            <ul className={styles.taList}>
               <li>
                 Guided students in debugging complex programming tasks, simplifying data structures concepts for better understanding and communication.
               </li>
@@ -270,31 +116,16 @@ export default function Experience() {
               </li>
             </ul>
           </div>
-          <div
-            style={{
-              minWidth: "230px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
+          <div className={styles.taImage}>
             <img
               src="/TA.jpg"
               alt="Teaching Assistant"
-              style={{
-                maxWidth: "230px",
-                width: "100%",
-                height: "auto",
-                borderRadius: "15px",
-                boxShadow: "0 6px 24px #4f46e533",
-                objectFit: "contain",
-                border: "3px solid #6366f1",
-              }}
+              className={styles.expImage}
             />
           </div>
         </div>
         <BackToHomeButton />
-          </div>
-        </div>
+      </div>
+    </div>
   );
 }

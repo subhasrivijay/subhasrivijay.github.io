@@ -1,40 +1,18 @@
 import BackToHomeButton from "../components/BackToHomeButton";
+import styles from "./Projects.module.css";
 
 export default function Projects() {
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        padding: "3rem 0",
-        background: "linear-gradient(135deg, #dbdbe6 0%, #b7e5f8 100%)",
-      }}
-    >
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "2rem" }}>
+    <div className={styles.root}>
+      <div className={styles.inner}>
 
         {/* RESCUEREADY */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            background: "rgba(255,255,255,0.21)",
-            borderRadius: "20px",
-            boxShadow: "0 6px 24px #6366f119",
-            overflow: "hidden",
-            marginTop: "2rem",
-          }}
-        >
-          {/* Left: Text */}
-          <div style={{ flex: 1.15, padding: "2.5rem 2rem", minWidth: 0 }}>
-            <div style={{ fontSize: "2rem", fontWeight: 700, marginBottom: "0.3rem" }}>
-              RescueReady <span style={{
-                color: "#7c3aed",
-                fontWeight: 500,
-                fontSize: "1.17rem",
-                letterSpacing: "0.01em",
-                marginLeft: "0.34em"
-              }}></span>
+        <div className={styles.projectSection}>
+          <div className={styles.projectText}>
+            <div className={styles.projectTitle}>
+              RescueReady <span className={styles.rescueReadySpan}></span>
             </div>
-            <ul style={{ fontSize: "1.21rem", color: "#1e293b", lineHeight: 1.7, margin: 0, paddingLeft: 24 }}>
+            <ul className={styles.projectList}>
               <li>
                 <b>AI-driven application</b> designed to complement EMT training with extra practice for rapid, high-stakes decision-making in realistic, challenging scenarios.
               </li>
@@ -46,10 +24,10 @@ export default function Projects() {
               </li>
               <li>
                 <a
-                  href="//RescueReady.png"
+                  href="/RescueReady.png"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: "#2563eb", textDecoration: "underline", fontWeight: 500 }}
+                  className={styles.projectLink}
                 >
                   RescueReady Design Day Poster
                 </a>
@@ -57,52 +35,21 @@ export default function Projects() {
               </li>
             </ul>
           </div>
-
-          {/* Right: Image */}
-          <div style={{
-            flex: 1,
-            minWidth: 0,
-            maxWidth: "320px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "2.5rem 2rem",
-
-          }}>
+          <div className={styles.projectImageArea}>
             <img
               src="/RR.jpg"
               alt="RescueReady Logo"
-              style={{
-                maxWidth: "320px",   // Make this as big as you like!
-                width: "100%",       // Makes the image grow to fill its allowed space
-                height: "auto",
-                borderRadius: "17px",
-                boxShadow: "0 6px 24px #4f46e544",
-                objectFit: "contain",
-                border: "5px solid #2563eb22",
-                margin: "0 auto"
-              }}
-              onError={e => { e.currentTarget.style.display="none"; }} // optional: hides image if missing
+              className={`${styles.projectImage} ${styles.rescueReadyImage}`}
+              onError={e => { e.currentTarget.style.display="none"; }}
             />
           </div>
         </div>
 
         {/* IMAZER */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            background: "rgba(255,255,255,0.21)",
-            borderRadius: "20px",
-            boxShadow: "0 6px 24px #6366f119",
-            overflow: "hidden",
-            marginTop: "2.5rem",
-          }}
-        >
-          {/* Left: Text */}
-          <div style={{ flex: 1.15, padding: "2.5rem 2rem", minWidth: 0 }}>
-            <div style={{ fontSize: "2rem", fontWeight: 700, marginBottom: "0.3rem" }}>IMAZER</div>
-            <ul style={{ fontSize: "1.21rem", color: "#1e293b", lineHeight: 1.7, margin: 0, paddingLeft: 24 }}>
+        <div className={styles.projectSection}>
+          <div className={styles.projectText}>
+            <div className={styles.projectTitle}>IMAZER</div>
+            <ul className={styles.projectList}>
               <li>
                 Designed and developed a Python-based image resizing application with a Graphical User Interface (GUI)
                 for intuitive user interaction and seamless image resizing.
@@ -115,45 +62,20 @@ export default function Projects() {
               </li>
             </ul>
           </div>
-          <div style={{
-            flex: 1,
-            minWidth: 0,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "2.5rem 2rem"
-          }}>
+          <div className={styles.projectImageArea}>
             <img
               src="/Imazer.jpg"
               alt="IMAZER Screenshot"
-              style={{
-                maxWidth: "420px",
-                width: "100%",
-                height: "auto",
-                borderRadius: "15px",
-                boxShadow: "0 6px 24px #4f46e533",
-                objectFit: "contain",
-              }}
+              className={`${styles.projectImage} ${styles.imazerImage}`}
             />
           </div>
         </div>
 
         {/* CAREATHON */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            background: "rgba(255,255,255,0.21)",
-            borderRadius: "20px",
-            boxShadow: "0 6px 24px #6366f119",
-            overflow: "hidden",
-            marginTop: "2.5rem",
-          }}
-        >
-          {/* Left: Text */}
-          <div style={{ flex: 1.15, padding: "2.5rem 2rem", minWidth: 0 }}>
-            <div style={{ fontSize: "2rem", fontWeight: 700, marginBottom: 0 }}>CAREATHON</div>
-            <ul style={{ fontSize: "1.21rem", color: "#1e293b", lineHeight: 1.7, margin: 0, paddingLeft: 24 }}>
+        <div className={styles.projectSection}>
+          <div className={styles.projectText}>
+            <div className={styles.projectTitle}>CAREATHON</div>
+            <ul className={styles.projectList}>
               <li>
                 Developed 'CAREATHON', an accessibility tool using Python, enabling speech-to-text, text-to-speech, and translation functionalities to assist individuals with speech and hearing impairments.
               </li>
@@ -165,26 +87,11 @@ export default function Projects() {
               </li>
             </ul>
           </div>
-          <div style={{
-            flex: 1,
-            minWidth: 0,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "2.5rem 2rem"
-          }}>
+          <div className={styles.projectImageArea}>
             <img
               src="/Careathon.jpg"
               alt="CAREATHON Screenshot"
-              style={{
-                maxWidth: "390px",
-                width: "100%",
-                height: "auto",
-                borderRadius: "15px",
-                boxShadow: "0 6px 24px #4f46e533",
-                objectFit: "contain",
-                border: "5px solid #7c3aed"
-              }}
+              className={`${styles.projectImage} ${styles.careathonImage}`}
             />
           </div>
         </div>

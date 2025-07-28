@@ -1,0 +1,95 @@
+/* Projects.module.css */
+.root {
+  min-height: 100vh;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #dbdbe6 0%, #b7e5f8 100%);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.projectSection {
+  display: flex;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.21);
+  border-radius: 20px;
+  box-shadow: 0 6px 24px #6366f119;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.projectSection:not(:first-child) {
+  margin-top: 2.5rem;
+}
+
+.projectText {
+  flex: 1.15;
+  padding: 2.5rem 2rem;
+  min-width: 0;
+}
+
+.projectTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.rescueReadySpan {
+  color: #7c3aed;
+  font-weight: 500;
+  font-size: 1.17rem;
+  letter-spacing: 0.01em;
+  margin-left: 0.34em;
+}
+
+.projectList {
+  font-size: 1.21rem;
+  color: #1e293b;
+  line-height: 1.7;
+  margin: 0;
+  padding-left: 24px;
+}
+
+.projectLink {
+  color: #2563eb;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.projectImageArea {
+  flex: 1;
+  min-width: 0;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 0 6px 24px #4f46e533;
+}
+
+.rescueReadyImage {
+  max-width: 320px;
+  border-radius: 17px;
+  border: 5px solid #2563eb22;
+  box-shadow: 0 6px 24px #4f46e544;
+  margin: 0 auto;
+}
+
+.imazerImage {
+  max-width: 420px;
+}
+
+.careathonImage {
+  max-width: 390px;
+  border: 5px solid #7c3aed;
+}

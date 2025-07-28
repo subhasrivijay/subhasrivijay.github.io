@@ -1,0 +1,132 @@
+
+.container {
+  min-height: 100vh;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #dbdbe6 0%, #b7e5f8 100%);
+}
+
+.innerContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.expSection {
+  display: flex;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.21);
+  border-radius: 20px;
+  box-shadow: 0 6px 24px #6366f119;
+  overflow: hidden;
+  margin-top: 2rem;
+  gap: 2.5rem;
+}
+
+.expSection.pad {
+  padding: 2.5rem 2rem;
+}
+
+.expSection.second {
+  padding: 2rem;
+  margin-top: 2.5rem;
+}
+
+.expSection.extraMargin {
+  margin-top: 2.5rem;
+}
+
+.expDetails {
+  flex: 1;
+  padding: 2.5rem 2rem;
+}
+
+.title {
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+.subtitle {
+  font-weight: 500;
+  color: #573fe1;
+  margin-bottom: 4px;
+}
+.duration {
+  float: right;
+  color: #3d4251;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.expList {
+  font-size: 1.09rem;
+  color: #222a35;
+  line-height: 1.72;
+  margin: 0;
+  padding-left: 23px;
+}
+.posterTitle {
+  font-size: 1.33rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+.posterList {
+  font-size: 1.08rem;
+  color: #363653;
+  line-height: 1.67;
+  margin: 0;
+  padding-left: 23px;
+}
+.expImageContainer {
+  min-width: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+}
+.posterImages {
+  min-width: 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+.expImage {
+  max-width: 230px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 24px #4f46e533;
+  object-fit: contain;
+  border: 3px solid #6366f1;
+}
+.taTitle {
+  font-size: 1.33rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2px;
+}
+.taSection {
+  display: flex;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.21);
+  border-radius: 20px;
+  box-shadow: 0 6px 24px #6366f119;
+  padding: 2rem;
+  margin-top: 2.5rem;
+  gap: 2.5rem;
+}
+.taList {
+  font-size: 1.08rem;
+  color: #363653;
+  line-height: 1.67;
+  margin: 0;
+  padding-left: 23px;
+}
+.taDetails {
+  flex: 1;
+}
+.taImage {
+  min-width: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,70 @@
+/* Contact.module.css */
+.container {
+  max-width: 520px;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 22px #2563eb19;
+  font-family: Inter, sans-serif;
+  position: relative;
+}
+
+.heading {
+  color: #2563eb;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  font-size: 1.13rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 1.8rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-size: 1.1rem;
+}
+
+.linkAnchor {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.button {
+  margin-top: 2.2rem;
+  display: block;
+  text-align: center;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.9rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.button:hover,
+.linkAnchor:hover {
+  background-color: #174bbd;
+  text-decoration: underline;
+}
+
+.quote {
+  font-style: italic;
+  color: #555;
+  background: #f5f7ff;
+  border-left: 4px solid #2563eb;
+  padding: 1rem 1.2rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+}
+
+.back {
+  margin-top: 2rem;
+}
