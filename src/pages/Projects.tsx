@@ -58,11 +58,11 @@ export default function Projects() {
                 Integrated multiple Python packages and libraries to support resizing images in various formats, ensuring high performance and versatility.
               </li>
               <li>
-                Implemented efficient algorithms for resizing images to custom dimensions, providing users with a streamlined experience across different image formats.
-              </li>
-              <li>
-                <a href="https://github.com/subhasrivijay/IMAZER">IMAZER</a>
-              </li>
+              Implemented efficient algorithms for resizing images to custom dimensions, providing users with a streamlined experience across different image formats.
+            </li>
+            <li>
+              Explore the project on <a href="https://github.com/subhasrivijay/IMAZER" target="_blank" rel="noopener noreferrer">GitHub (IMAZER)</a>.
+            </li>
             </ul>
           </div>
           <div className={styles.projectImageArea}>
@@ -89,8 +89,8 @@ export default function Projects() {
                 This contributes to a healthcare initiative by creating a tool that allows people with speech and hearing disabilities to express their thoughts and engage in conversations effectively.
               </li>
               <li>
-                <a href = "https://github.com/subhasrivijay/CAREATHON">CAREATHON</a>
-              </li>
+              Explore the project on <a href="https://github.com/subhasrivijay/CAREATHON" target="_blank" rel="noopener noreferrer">GitHub (CAREATHON)</a>.
+            </li>
             </ul>
           </div>
           <div className={styles.projectImageArea}>
