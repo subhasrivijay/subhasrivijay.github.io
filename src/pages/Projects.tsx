@@ -60,6 +60,9 @@ export default function Projects() {
               <li>
                 Implemented efficient algorithms for resizing images to custom dimensions, providing users with a streamlined experience across different image formats.
               </li>
+              <li>
+                <a href="https://github.com/subhasrivijay/IMAZER">IMAZER</a>
+              </li>
             </ul>
           </div>
           <div className={styles.projectImageArea}>
@@ -84,6 +87,9 @@ export default function Projects() {
               </li>
               <li>
                 This contributes to a healthcare initiative by creating a tool that allows people with speech and hearing disabilities to express their thoughts and engage in conversations effectively.
+              </li>
+              <li>
+                <a href = "https://github.com/subhasrivijay/CAREATHON">CAREATHON</a>
               </li>
             </ul>
           </div>
