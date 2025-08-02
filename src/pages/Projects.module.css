@@ -93,3 +93,17 @@
   max-width: 390px;
   border: 5px solid #7c3aed;
 }
+a, .projectLink {
+  color: #0077cc; /* blue color to make it look like a link */
+  text-decoration: underline; /* adds underline */
+  font-weight: bold; /* optional, but makes it pop */
+}
+
+a:visited, .projectLink:visited {
+  color: #551A8B; /* purple for visited links */
+}
+
+a:hover, .projectLink:hover {
+  color: #005fa3;
+  text-decoration: underline;
+}
