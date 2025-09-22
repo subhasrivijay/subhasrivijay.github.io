@@ -1,4 +1,17 @@
 /* Contact.module.css */
+.bgNeural {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw; height: 45vh;
+  z-index: 0;
+  pointer-events: none;
+  animation: neuralFloatContact 14s infinite alternate ease-in-out;
+}
+@keyframes neuralFloatContact {
+  0% { transform: translateY(0);}
+  52% { transform: translateY(11px) scale(1.02);}
+  100% { transform: translateY(-11px) scale(0.98);}
+}
 .container {
   max-width: 520px;
   margin: 3rem auto;

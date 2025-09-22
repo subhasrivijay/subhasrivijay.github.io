@@ -1,84 +1,54 @@
 import BackToHomeButton from "../components/BackToHomeButton";
+import styles from "./Resume.module.css";
+
 const resumePdfUrl = `${import.meta.env.BASE_URL}RESUME _SUBHASRI_VIJAY_.pdf`;
 
 export default function Resume() {
   return (
-    <div
-      style={{
-        maxWidth: 500,
-        margin: "4rem auto",
-        padding: "2.5rem 1.5rem",
-        background: "linear-gradient(135deg, #e0e7ff 70%, #f2f7fd 100%)",
-        borderRadius: 18,
-        boxShadow: "0 8px 44px #a5b4fc35",
-        textAlign: "center",
-        fontFamily: "'Inter',sans-serif",
-      }}
-    >
-      <img
-        src="/new.jpg"
-        alt="Subhasri Vijay"
-        style={{
-          width: "120px",
-          height: "120px",
-          borderRadius: "50%",
-          objectFit: "cover",
-          boxShadow: "0 4px 16px #909ffc2a",
-          border: "4px solid #6366f1",
-          marginBottom: "1.5rem",
-        }}
-      />
-      <h1 style={{ marginBottom: 8, color: "#4f46e5", letterSpacing: 1 }}>Subhasri Vijay</h1>
-      <p style={{ color: "#444", margin: "0 0 0.8em" }}>
-        <b>MSE Computer Science Student at</b> @ Johns Hopkins
-      </p>
-      <div style={{ marginBottom: "1.2em", color: "#252b36", fontSize: '1.09em' }}>
+    <div className={styles.root}>
+      <svg className={styles.bgNeural} width="900" height="220" viewBox="0 0 900 220" fill="none">
+        <circle cx="150" cy="70" r="27" fill="#a5b4fc" opacity="0.09" />
+        <circle cx="680" cy="60" r="21" fill="#38bdf8" opacity="0.09" />
+        <circle cx="880" cy="130" r="32" fill="#6366f1" opacity="0.12" />
+        <line x1="150" y1="70" x2="680" y2="60" stroke="#2563eb" strokeWidth="2" opacity="0.07" />
+        <line x1="680" y1="60" x2="880" y2="130" stroke="#0ea5e9" strokeWidth="2" opacity="0.09" />
+        <text x="40" y="200" fontSize="18" fill="#818cf8" opacity="0.07" fontFamily="monospace">
+          Resume · Academics
+        </text>
+      </svg>
+      <div className={styles.card}>
+        <img src="/new.jpg" alt="Subhasri Vijay" className={styles.avatar} />
+        <h1 className={styles.heading}>Subhasri Vijay</h1>
+        <p className={styles.subheading}>
+          <b>MSE Computer Science Student</b> @ Johns Hopkins
+        </p>
+        <div className={styles.links}>
+          <a href="mailto:svijay2@jhu.edu" className={styles.link}>
+            svijay2@jhu.edu
+          </a>
+          <span>|</span>
+          <a
+            href="https://linkedin.com/in/subhasri-vijay-811a0620a"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            LinkedIn ↗
+          </a>
+          <span>|</span>
+        </div>
         <a
-          href="mailto:svijay2@jhu.edu"
-          style={{ color: "#2563eb", textDecoration: "underline", margin: "0 7px" }}
-        >
-          svijay2@jhu.edu
-        </a>
-        <span> | </span>
-        <a
-          href="https://linkedin.com/in/subhasri-vijay-811a0620a"
+          href={resumePdfUrl}
           target="_blank"
           rel="noopener noreferrer"
-          style={{ color: "#2563eb", textDecoration: "underline", margin: "0 7px" }}
+          className={styles.resumeBtn}
         >
-          LinkedIn ↗
+          📄 View PDF Resume
         </a>
-        <span> | </span>
+        <div style={{ marginTop: "2.1rem" }}>
+          <BackToHomeButton />
+        </div>
       </div>
-      <a
-        href={resumePdfUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          display: "inline-block",
-          background: "linear-gradient(90deg, #6366f1, #2563eb)",
-          color: "white",
-          fontWeight: 600,
-          textDecoration: "none",
-          padding: "0.75em 2.1em",
-          borderRadius: 999,
-          fontSize: "1.15em",
-          marginTop: "1.8em",
-          boxShadow: "0 2px 12px #6366f142",
-          transition: "transform 0.13s, box-shadow 0.13s",
-        }}
-        onMouseOver={e => {
-          e.currentTarget.style.transform = "scale(1.06)";
-          e.currentTarget.style.boxShadow = "0 4px 28px #6366f138";
-        }}
-        onMouseOut={e => {
-          e.currentTarget.style.transform = "scale(1)";
-          e.currentTarget.style.boxShadow = "0 2px 12px #6366f142";
-        }}
-      >
-        📄 View PDF Resume
-      </a>
-      <div><BackToHomeButton /></div>
     </div>
   );
 }

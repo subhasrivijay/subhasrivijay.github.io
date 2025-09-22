@@ -4,7 +4,22 @@ import styles from './Experience.module.css';
 export default function Experience() {
   return (
     <div className={styles.container}>
+      {/* AI-inspired Neural Background */}
+      <svg className={styles.bgNeural} width="1200" height="400" viewBox="0 0 1200 400" fill="none">
+        <circle cx="150" cy="120" r="27" fill="#a5b4fc" opacity="0.15" />
+        <circle cx="710" cy="100" r="22" fill="#38bdf8" opacity="0.14" />
+        <circle cx="950" cy="230" r="28" fill="#6366f1" opacity="0.15" />
+        <line x1="150" y1="120" x2="710" y2="100" stroke="#2563eb" strokeWidth="2" opacity="0.07" />
+        <line x1="710" y1="100" x2="950" y2="230" stroke="#0ea5e9" strokeWidth="2" opacity="0.10" />
+        <text x="40" y="370" fontSize="18" fill="#818cf8" opacity="0.09" fontFamily="monospace">
+          AI · ML · Σ Loss · Backprop
+        </text>
+      </svg>
+
       <div className={styles.innerContainer}>
+        <h2 className={styles.pageHeader}>
+          <span role="img" aria-label="experience">🧠</span> My Experience
+        </h2>
 
         {/* Cataract Research Assistant */}
         <div className={styles.expSection}>
