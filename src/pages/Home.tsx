@@ -4,24 +4,24 @@ import styles from './Home.module.css';
 
 const roles = [
   "MSE CS Student at Johns Hopkins University",
-  "Student Research Assistant",
+  "Graduate Research Assistant",
   "Head Course Assistant",
-  "Masson Fellow"
+  "Masson Fellow 2024"
 ];
 
 const menuItems = [
-  { label: 'Projects', path: '/projects', emoji: '🛠️', tagline: 'ML, Optimization, Fun Builds' },
-  { label: 'Resume', path: '/resume', emoji: '📄', tagline: 'Skills, Accomplishments' },
-  { label: 'Experience', path: '/experience', emoji: '💼', tagline: 'Research, Teaching' },
-  { label: 'More About Me', path: '/more-about-me', emoji: '🧩', tagline: 'Interests, Values' },
-  { label: 'Contact', path: '/contact', emoji: '✉️', tagline: 'Let’s Connect' },
+  { label: 'Projects', path: '/projects', emoji: '🛠️' },
+  { label: 'Resume', path: '/resume', emoji: '📄' },
+  { label: 'Experience', path: '/experience', emoji: '💼' },
+  { label: 'More About Me', path: '/more-about-me', emoji: '🧩' },
+  { label: 'Contact', path: '/contact', emoji: '✉️' },
 ];
 
 export default function Home() {
   const navigate = useNavigate();
   const [typedText] = useTypewriter({
     words: roles,
-    loop: 0,
+    loop: 0, // infinite
     typeSpeed: 72,
     deleteSpeed: 34,
     delaySpeed: 1650,
@@ -72,24 +72,30 @@ export default function Home() {
           </span>
         </div>
 
-        {/* Professional card-grid navigation */}
         <div className={styles.menuGrid}>
-          {menuItems.map(item => (
-            <div
-              key={item.label}
-              className={styles.menuCard}
-              tabIndex={0}
-              role="button"
-              aria-label={item.label}
-              onClick={() => navigate(item.path)}
-              onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && navigate(item.path)}
-            >
-              <span className={styles.menuEmoji}>{item.emoji}</span>
-              <span className={styles.menuLabel}>{item.label}</span>
-              <span className={styles.menuTagline}>{item.tagline}</span>
-            </div>
-          ))}
-        </div>
+        {menuItems.map(item => (
+          <div
+            key={item.label}
+            className={styles.menuCard}
+            tabIndex={0}
+            role="button"
+            aria-label={item.label}
+            onClick={() => navigate(item.path)}
+            onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && navigate(item.path)}
+          >
+            <span className={styles.menuEmoji}>{item.emoji}</span>
+            <span className={styles.menuLabel}>{item.label}</span>
+          </div>
+        ))}
+      </div>
+
+        {/* Call to Action */}
+        <button
+          className={styles.ctaBtn}
+          onClick={() => navigate('/contact')}
+        >
+          Let&apos;s Connect!
+        </button>
       </div>
     </div>
   );
