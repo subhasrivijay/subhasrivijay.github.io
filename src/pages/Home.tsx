@@ -1,162 +1,96 @@
-import React, { useEffect, useRef, useState } from "react";
-import styles from "./Home.module.css";
+import { useNavigate } from 'react-router-dom';
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import styles from './Home.module.css';
 
-type Section = {
-  id: string;
-  title: string;
-  lead: string;
-  body: string;
-  ctas?: { label: string; href: string }[];
-};
+const roles = [
+  "MSE CS Student at Johns Hopkins University",
+  "Student Research Assistant",
+  "Head Course Assistant",
+  "Masson Fellow"
+];
 
-const sections: Section[] = [
-  {
-    id: "about",
-    title: "About",
-    lead: "Building impactful solutions at Johns Hopkins University.",
-    body:
-      "Hi, I’m Subhasri Vijay. I’m a CS graduate student, research assistant, and Masson Fellow. I love merging theory and real-world applications in machine learning, optimization, and digital systems.",
-    ctas: [
-      { label: "View Resume", href: "/resume" },
-      { label: "Contact", href: "/contact" },
-    ],
-  },
-  {
-    id: "experience",
-    title: "Experience",
-    lead: "Research, teaching, and leadership roles.",
-    body:
-      "From leading course assistant teams to advancing research in computer science and AI, I thrive in collaborative, challenging environments solving problems with impact.",
-    ctas: [{ label: "See Details", href: "/experience" }],
-  },
-  {
-    id: "projects",
-    title: "Projects",
-    lead: "Selected work in ML, optimization, and software.",
-    body:
-      "Highlights include ML-powered simulations, algorithmic toolkits, and scalable systems. I enjoy making abstract ideas practical and accessible.",
-    ctas: [{ label: "Explore Projects", href: "/projects" }],
-  },
-  {
-    id: "more",
-    title: "More About Me",
-    lead: "Interests, values, and personal growth.",
-    body:
-      "Curious, creative, and driven. I value mentorship, diversity, and continuous learning—in tech and beyond.",
-    ctas: [{ label: "Learn More", href: "/more-about-me" }],
-  },
-  {
-    id: "contact",
-    title: "Contact",
-    lead: "Let’s connect or collaborate.",
-    body:
-      "Reach out for projects, mentoring, or professional opportunities. I respond fastest by email or LinkedIn.",
-    ctas: [
-      { label: "Email", href: "mailto:subhasri@example.com" },
-      { label: "LinkedIn", href: "https://linkedin.com/in/subhasrivijay" },
-    ],
-  },
+const menuItems = [
+  { label: 'Projects', path: '/projects', emoji: '🛠️', tagline: 'ML, Optimization, Fun Builds' },
+  { label: 'Resume', path: '/resume', emoji: '📄', tagline: 'Skills, Accomplishments' },
+  { label: 'Experience', path: '/experience', emoji: '💼', tagline: 'Research, Teaching' },
+  { label: 'More About Me', path: '/more-about-me', emoji: '🧩', tagline: 'Interests, Values' },
+  { label: 'Contact', path: '/contact', emoji: '✉️', tagline: 'Let’s Connect' },
 ];
 
 export default function Home() {
-  const [activeId, setActiveId] = useState<string>(sections[0].id);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handler = () => {
-      const snapEls = sections.map(s => document.getElementById(s.id));
-      let best = { id: sections[0].id, top: Infinity };
-      for (const el of snapEls) {
-        if (!el) continue;
-        const rect = el.getBoundingClientRect();
-        if (rect.top >= 0 && rect.top < best.top + 20) {
-          best = { id: el.id, top: rect.top };
-        }
-      }
-      setActiveId(best.id);
-    };
-    window.addEventListener("scroll", handler, { passive: true });
-    handler();
-    return () => window.removeEventListener("scroll", handler);
-  }, []);
-
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-    e.preventDefault();
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
+  const navigate = useNavigate();
+  const [typedText] = useTypewriter({
+    words: roles,
+    loop: 0,
+    typeSpeed: 72,
+    deleteSpeed: 34,
+    delaySpeed: 1650,
+  });
 
   return (
     <div className={styles.root}>
-      <aside className={styles.sidebar}>
-        <div className={styles.brand}>
-          <img
-            src="/new.jpg"
-            alt="Portrait of Subhasri Vijay"
-            className={styles.avatar}
-            loading="lazy"
-            width={88}
-            height={88}
-          />
-          <div>
-            <h1 className={styles.name}>Subhasri Vijay</h1>
-            <div className={styles.role}>CS Graduate Student, JHU</div>
-          </div>
+      {/* SVG Researcher Background */}
+      <svg className={styles.bgNeural} width="700" height="400" viewBox="0 0 700 400" fill="none">
+        {/* Neurons */}
+        <circle cx="100" cy="180" r="26" fill="#a5b4fc" opacity="0.22" />
+        <circle cx="240" cy="90" r="18" fill="#818cf8" opacity="0.16" />
+        <circle cx="350" cy="200" r="36" fill="#5eead4" opacity="0.15" />
+        <circle cx="520" cy="110" r="20" fill="#38bdf8" opacity="0.18" />
+        <circle cx="600" cy="220" r="30" fill="#6366f1" opacity="0.15" />
+        {/* Connections */}
+        <line x1="100" y1="180" x2="240" y2="90" stroke="#2563eb" strokeWidth="2" opacity="0.09" />
+        <line x1="240" y1="90" x2="350" y2="200" stroke="#0ea5e9" strokeWidth="2" opacity="0.13" />
+        <line x1="350" y1="200" x2="520" y2="110" stroke="#818cf8" strokeWidth="2" opacity="0.12" />
+        <line x1="520" y1="110" x2="600" y2="220" stroke="#0ea5e9" strokeWidth="2" opacity="0.1" />
+        <line x1="240" y1="90" x2="520" y2="110" stroke="#a5b4fc" strokeWidth="2" opacity="0.08" />
+        {/* Optional: formula */}
+        <text x="20" y="355" fontSize="20" fill="#818cf8" opacity="0.1" fontFamily="monospace">
+          y = σ(Wx + b)
+        </text>
+      </svg>
+
+      {/* Main glass morph card */}
+      <div className={styles.card}>
+        <img
+          src="/new.jpg"
+          alt="Portrait of Subhasri Vijay"
+          className={styles.avatar}
+        />
+        <h1 className={styles.title}>
+          Hi, I&apos;m <span className={styles.name}>Subhasri Vijay</span>
+          <span className={styles.wave}>👋</span>
+        </h1>
+
+        <div className={styles.subtitle}>
+          <span className={styles.typingRole}>
+            {typedText}
+            <Cursor />
+          </span>
+          <br />
+          <span className={styles.tagline}>
+            Transforming Ideas into Impactful Solutions for the Future
+          </span>
         </div>
 
-        <nav className={styles.nav}>
-          <ul className={styles.navList}>
-            {sections.map(s => (
-              <li key={s.id}>
-                <a
-                  href={`#${s.id}`}
-                  className={
-                    activeId === s.id ? styles.navLinkActive : styles.navLink
-                  }
-                  onClick={e => handleNavClick(e, s.id)}
-                  aria-current={activeId === s.id ? "page" : undefined}
-                >
-                  {s.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </aside>
-
-      <main className={styles.infinity} ref={containerRef}>
-        {sections.map(s => (
-          <section id={s.id} key={s.id} className={styles.snapSection}>
-            <div className={styles.sectionCard} tabIndex={0}>
-              <header className={styles.sectionHeader}>
-                <h2 className={styles.sectionTitle}>{s.title}</h2>
-                <div className={styles.sectionLead}>{s.lead}</div>
-              </header>
-              <div className={styles.sectionBody}>{s.body}</div>
-              {s.ctas?.length ? (
-                <div className={styles.ctaRow}>
-                  {s.ctas.map((c) => (
-                    <a
-                      key={c.label}
-                      href={c.href}
-                      className={
-                        c.label.toLowerCase().includes("email") ||
-                        c.label.toLowerCase().includes("resume")
-                          ? styles.primaryBtn
-                          : styles.secondaryBtn
-                      }
-                      target={c.href.startsWith("http") ? "_blank" : undefined}
-                      rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    >
-                      {c.label}
-                    </a>
-                  ))}
-                </div>
-              ) : null}
+        {/* Professional card-grid navigation */}
+        <div className={styles.menuGrid}>
+          {menuItems.map(item => (
+            <div
+              key={item.label}
+              className={styles.menuCard}
+              tabIndex={0}
+              role="button"
+              aria-label={item.label}
+              onClick={() => navigate(item.path)}
+              onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && navigate(item.path)}
+            >
+              <span className={styles.menuEmoji}>{item.emoji}</span>
+              <span className={styles.menuLabel}>{item.label}</span>
+              <span className={styles.menuTagline}>{item.tagline}</span>
             </div>
-          </section>
-        ))}
-      </main>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
