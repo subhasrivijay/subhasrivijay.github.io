@@ -6,7 +6,7 @@ const roles = [
   "MSE CS Student at Johns Hopkins University",
   "Graduate Research Assistant",
   "Head Course Assistant",
-  "Masson Fellow 2024"
+  "Masson Fellow"
 ];
 
 const menuItems = [
@@ -72,22 +72,17 @@ export default function Home() {
           </span>
         </div>
 
-        <div className={styles.menuGrid}>
-        {menuItems.map(item => (
-          <div
-            key={item.label}
-            className={styles.menuCard}
-            tabIndex={0}
-            role="button"
-            aria-label={item.label}
-            onClick={() => navigate(item.path)}
-            onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && navigate(item.path)}
-          >
-            <span className={styles.menuEmoji}>{item.emoji}</span>
-            <span className={styles.menuLabel}>{item.label}</span>
-          </div>
-        ))}
-      </div>
+        <div className={styles.menu}>
+          {menuItems.map(item => (
+            <button
+              key={item.label}
+              className={styles.menuBtn}
+              onClick={() => navigate(item.path)}
+            >
+              <span className={styles.menuIcon}>{item.emoji}</span> {item.label}
+            </button>
+          ))}
+        </div>
 
         {/* Call to Action */}
         <button
