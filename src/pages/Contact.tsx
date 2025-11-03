@@ -17,8 +17,8 @@ export default function Contact() {
       <h2 className={styles.heading}>✉️ Contact Me</h2>
 
       <p className={styles.text}>
-        I’m always excited to hear from new people — whether it’s about a project, a question, or just a shared interest in tech, research, or something in between.
-        Feel free to reach out — I’d love to connect!
+        I’m always excited to hear from new people, whether it’s about a project, a question, or just a shared interest in tech, research, or something in between.
+        Feel free to reach out,  I’d love to connect!
       </p>
 
       <div className={styles.links}>

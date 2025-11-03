@@ -1,7 +1,7 @@
 import BackToHomeButton from "../components/BackToHomeButton";
 import styles from "./Resume.module.css";
 
-const resumePdfUrl = `${import.meta.env.BASE_URL}RESUME _SUBHASRI_VIJAY_.pdf`;
+const resumePdfUrl = `${import.meta.env.BASE_URL}RESUME _SUBHASRI_VIJAY_GH.pdf`;
 
 export default function Resume() {
   return (
@@ -23,8 +23,8 @@ export default function Resume() {
           <b>MSE Computer Science Student</b> @ Johns Hopkins
         </p>
         <div className={styles.links}>
-          <a href="mailto:svijay2@jhu.edu" className={styles.link}>
-            svijay2@jhu.edu
+          <a href="mailto:subhasrivijay@gmail.com" className={styles.link}>
+            subhasrivijay@gmail.com
           </a>
           <span>|</span>
           <a
