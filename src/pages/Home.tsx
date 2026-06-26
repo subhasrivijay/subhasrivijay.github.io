@@ -3,10 +3,8 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import styles from './Home.module.css';
 
 const roles = [
-  "MSE CS Student at Johns Hopkins University",
-  "Graduate Research Assistant",
-  "Head Course Assistant",
-  "Masson Fellow"
+  "Incoming Intern at Inflection Medicine",
+  "MSE CS Graduate from Johns Hopkins University"  
 ];
 
 const menuItems = [

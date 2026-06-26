@@ -1,7 +1,7 @@
 import BackToHomeButton from "../components/BackToHomeButton";
 import styles from "./Resume.module.css";
 
-const resumePdfUrl = `${import.meta.env.BASE_URL}RESUME _SUBHASRI_VIJAY_GH.pdf`;
+const resumePdfUrl = `${import.meta.env.BASE_URL}Subhasri_Vijay_Resume.pdf`;
 
 export default function Resume() {
   return (
