@@ -23,15 +23,6 @@ export default function Contact() {
 
       <div className={styles.links}>
         <div>
-          📧{" "}
-          <a
-            href="mailto:subhasrivijay@gmail.com"
-            className={styles.linkAnchor}
-          >
-            subhasrivijay@gmail.com
-          </a>
-        </div>
-        <div>
           🔗{" "}
           <a
             href="https://linkedin.com/in/subhasri-vijay-811a0620a"
@@ -43,18 +34,6 @@ export default function Contact() {
           </a>
         </div>
       </div>
-
-      <a
-        href="mailto:svijay2@jhu.edu"
-        className={styles.button}
-      >
-        📩 Say Hello
-      </a>
-
-      <blockquote className={styles.quote}>
-        “The best connections often start with a simple hello.”
-      </blockquote>
-
       <div className={styles.back}>
         <BackToHomeButton />
       </div>

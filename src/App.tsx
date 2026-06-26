@@ -12,9 +12,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/resume" element={<Resume />} />
+        {/* <Route path="/resume" element={<Resume />} /> */}
         <Route path="/experience" element={<Experience />} />
-        <Route path="/more-about-me" element={<About />} />
+        {/* <Route path="/more-about-me" element={<About />} /> */}
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>

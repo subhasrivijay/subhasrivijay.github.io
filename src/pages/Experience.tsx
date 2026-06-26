@@ -29,7 +29,7 @@ export default function Experience() {
             </div>
             <div className={styles.subtitle}>
               Wilmer Eye Institute
-              <span className={styles.duration}>January 2022–Present</span>
+              <span className={styles.duration}>January 2022–May 2026</span>
             </div>
             <ul className={styles.expList}>
               <li>
@@ -92,7 +92,7 @@ export default function Experience() {
             </div>
             <div className={styles.subtitle}>
               RescueReady{" "}
-              <span className={styles.duration}>January 2025–Present</span>
+              <span className={styles.duration}>January 2025–September 2025</span>
             </div>
             <ul className={styles.expList}>
               <li>
@@ -117,7 +117,7 @@ export default function Experience() {
           <div className={styles.taDetails}>
             <div className={styles.taTitle}>
               Head Teaching Assistant
-              <span className={styles.duration}>EN.601.226 | February 2024–Present</span>
+              <span className={styles.duration}>EN.601.226 | February 2024–May 2026</span>
             </div>
             <ul className={styles.taList}>
               <li>

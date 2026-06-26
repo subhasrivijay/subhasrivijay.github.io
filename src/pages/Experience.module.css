@@ -109,7 +109,6 @@
   padding-left: 23px;
 }
 .expList li::before {
-  content: "✅";
   margin-right: 0.4em;
   color: #38bdf8;
   font-size: 1em;
@@ -129,7 +128,6 @@
   padding-left: 23px;
 }
 .posterList li::before {
-  content: "📑";
   margin-right: 0.4em;
   color: #6366f1;
   font-size: 1em;
@@ -179,7 +177,6 @@
   padding-left: 23px;
 }
 .taList li::before {
-  content: "🧑‍🏫";
   margin-right: 0.4em;
   color: #2563eb;
   font-size: 1em;

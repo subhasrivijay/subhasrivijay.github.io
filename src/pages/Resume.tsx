@@ -20,13 +20,10 @@ export default function Resume() {
         <img src="/new.jpg" alt="Subhasri Vijay" className={styles.avatar} />
         <h1 className={styles.heading}>Subhasri Vijay</h1>
         <p className={styles.subheading}>
-          <b>MSE Computer Science Student</b> @ Johns Hopkins
+          <b>Incoming Intern </b> @ Inflection Medicine 
         </p>
         <div className={styles.links}>
-          <a href="mailto:subhasrivijay@gmail.com" className={styles.link}>
-            subhasrivijay@gmail.com
-          </a>
-          <span>|</span>
+
           <a
             href="https://linkedin.com/in/subhasri-vijay-811a0620a"
             target="_blank"
