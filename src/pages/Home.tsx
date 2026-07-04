@@ -1,15 +1,7 @@
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import styles from "./Home.module.css";
 
-const roles = [
-  "Software Intern at Inflection Medicine",
-  "BS/MSE CS Graduate :  Johns Hopkins '26",
-  "AI + Healthcare Researcher",
-  "Award-winning Entrepreneur",
-];
-
 export default function Home() {
-  const [activeRole, setActiveRole] = useState(0);
   const [activeSection, setActiveSection] = useState("hero");
   const [showScrollTop, setShowScrollTop] = useState(false);
 
@@ -22,23 +14,11 @@ export default function Home() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // Role rotation effect
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveRole((prev) => (prev + 1) % roles.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  // Scroll spy for active section and scroll-to-top visibility
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 100;
-
-      // Show/hide scroll to top button
       setShowScrollTop(window.scrollY > 500);
 
-      // Determine active section
       const sections = ["hero", "resume", "projects", "experience"];
       for (const section of [...sections].reverse()) {
         const el = document.getElementById(section);
@@ -55,7 +35,6 @@ export default function Home() {
 
   return (
     <div className={styles.root}>
-      {/* Navigation */}
       <header className={styles.navbar}>
         <div className={styles.brand}>Subhasri Vijay</div>
         <nav className={styles.navLinks}>
@@ -64,6 +43,12 @@ export default function Home() {
             onClick={() => scrollToSection("hero")}
           >
             Home
+          </button>
+          <button
+            className={`${styles.navLink} ${activeSection === "skills" ? styles.navLinkActive : ""}`}
+            onClick={() => scrollToSection("skills")}
+          >
+            Skills
           </button>
           <button
             className={`${styles.navLink} ${activeSection === "resume" ? styles.navLinkActive : ""}`}
@@ -108,25 +93,16 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Background Elements */}
       <div className={styles.bgOrbOne}></div>
       <div className={styles.bgOrbTwo}></div>
       <div className={styles.bgOrbThree}></div>
 
-      {/* Hero Section */}
       <section id="hero" className={styles.hero}>
         <div className={styles.heroText}>
           <h1 className={styles.title}>
             Hi, I&apos;m <span className={styles.name}>Subhasri Vijay</span>
           </h1>
 
-          <div className={styles.sliderWrap}>
-            <div className={styles.sliderPill} key={activeRole}>
-              {roles[activeRole]}
-            </div>
-          </div>
-
-          {/* Quick Highlights
           <div className={styles.highlights}>
             <div className={styles.highlightItem}>
               <span className={styles.highlightIcon}>💼</span>
@@ -139,52 +115,31 @@ export default function Home() {
               <span className={styles.highlightIcon}>🎓</span>
               <span>BS/MSE CS : Johns Hopkins '26</span>
             </div>
-          </div> */}
-
-          <div className={styles.descriptionWrap}>
-          <p className={styles.description}>
-          A BS/MSE Computer Science graduate from Johns Hopkins University, specializing in Deep Learning with a concentration in Computer Vision. Currently, I'm a Software Intern at Inflection Medicine.
-          </p>
-          <p className={styles.description}>
-          I co-founded RescueReady, an AI-driven training platform for EMTs, and have driven research on AI-based surgical skill assessment as a Research Assistant at Wilmer Eye Institute with work presented at AUPO, ISBI, and MIDL. I'm passionate about building tools that solve real problems with currently exploring the intersection of healthcare, AI, and software.
-          </p>
+            <div className={styles.highlightItem}>
+              <span className={styles.highlightIcon}>🛠️</span>
+              <span>AI + Healthcare Researcher</span>
+            </div>
           </div>
 
-          <div className={styles.ctaGroup}>
-            <button
-              className={`${styles.btnBase} ${styles.primaryBtn}`}
-              onClick={() => scrollToSection("resume")}
-            >
-              Resume
-            </button>
-            <button
-              className={`${styles.btnBase} ${styles.primaryBtn}`}
-              onClick={() => scrollToSection("projects")}
-            >
-              Projects
-            </button>
-            <button
-              className={`${styles.btnBase} ${styles.primaryBtn}`}
-              onClick={() => scrollToSection("experience")}
-            >
-              Experience
-            </button>
+          <div className={styles.descriptionWrap}>
+            <p className={styles.description}>
+              A BS/MSE Computer Science graduate from Johns Hopkins University, specializing in Deep Learning with a concentration in Computer Vision. Currently, I'm a Software Intern at Inflection Medicine.
+            </p>
+            <p className={styles.description}>
+              I co-founded RescueReady, an AI-driven training platform for EMTs, and have driven research on AI-based surgical skill assessment as a Research Assistant at Wilmer Eye Institute with work presented at AUPO, ISBI, and MIDL. I'm passionate about building tools that solve real problems while exploring the intersection of healthcare, AI, and software.
+            </p>
           </div>
         </div>
 
         <div className={styles.heroCard}>
           <img src="/new.jpg" alt="Subhasri Vijay" className={styles.avatar} />
           <div className={styles.heroCardOverlay}>
-            <div className={styles.heroCardInfo}>
-              {/* <span className={styles.heroCardName}>Subhasri Vijay</span>
-              <span className={styles.heroCardRole}>CS Graduate & AI Researcher</span> */}
-            </div>
+            <div className={styles.heroCardInfo}></div>
           </div>
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section className={styles.section}>
+      <section id="skills" className={styles.section}>
         <div className={styles.skillsContainer}>
           <h2 className={styles.skillsTitle}>Technical Skills</h2>
           <div className={styles.skillsGrid}>
@@ -202,7 +157,6 @@ export default function Home() {
             <div className={styles.skillCategory}>
               <h3 className={styles.skillCategoryTitle}>Frameworks & Libraries</h3>
               <div className={styles.skillTags}>
-                <span className={styles.skillTag}>React</span>
                 <span className={styles.skillTag}>PyTorch</span>
                 <span className={styles.skillTag}>TensorFlow</span>
                 <span className={styles.skillTag}>Node.js</span>
@@ -210,7 +164,7 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.skillCategory}>
-              <h3 className={styles.skillCategoryTitle}>Tools & Platforms</h3>
+              <h3 className={styles.skillCategoryTitle}>Tools and Platforms</h3>
               <div className={styles.skillTags}>
                 <span className={styles.skillTag}>Git</span>
                 <span className={styles.skillTag}>SQLite</span>
@@ -228,7 +182,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Resume Section */}
       <section id="resume" className={styles.section}>
         <div className={styles.sectionCard}>
           <div className={styles.sectionHeader}>
@@ -266,7 +219,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
       <section id="projects" className={styles.section}>
         <div className={styles.sectionCard}>
           <div className={styles.sectionHeader}>
@@ -277,18 +229,13 @@ export default function Home() {
           </div>
 
           <div className={styles.cardStack}>
-            {/* RescueReady */}
             <article className={`${styles.infoCard} ${styles.infoCardProduct}`}>
               <div className={styles.cardText}>
                 <div className={`${styles.cardTag} ${styles.productTag}`}>AI / Healthcare</div>
                 <h3>RescueReady</h3>
-                <p className={styles.cardSubtitle}>
-                  AI-powered EMT training platform
-                </p>
+                <p className={styles.cardSubtitle}>AI-powered EMT training platform</p>
                 <p className={styles.cardDescription}>
-                  RescueReady is an AI-driven platform designed to help EMTs practice
-                  rapid decision-making in realistic, high-pressure emergency scenarios.
-                  It uses generative AI to create dynamic simulations that adapt to user choices.
+                  RescueReady is an AI-driven platform designed to help EMTs practice rapid decision-making in realistic, high-pressure emergency scenarios. It uses generative AI to create dynamic simulations that adapt to user choices.
                 </p>
                 <ul className={styles.bulletList}>
                   <li>Built to complement EMT training with realistic emergency scenarios</li>
@@ -329,7 +276,6 @@ export default function Home() {
               </div>
             </article>
 
-            {/* CAREATHON */}
             <article className={`${styles.infoCard} ${styles.infoCardResearch}`}>
               <div className={styles.cardText}>
                 <div className={`${styles.cardTag} ${styles.researchTag}`}>Accessibility</div>
@@ -338,10 +284,7 @@ export default function Home() {
                   Communication tool for speech and hearing impairments
                 </p>
                 <p className={styles.cardDescription}>
-                  CAREATHON is an accessibility tool built to help individuals with
-                  speech and hearing impairments communicate more easily. It combines
-                  speech-to-text, text-to-speech, and translation features in a simple
-                  Python interface.
+                  CAREATHON is an accessibility tool built to help individuals with speech and hearing impairments communicate more easily. It combines speech-to-text, text-to-speech, and translation features in a simple Python interface.
                 </p>
                 <ul className={styles.bulletList}>
                   <li>Developed in Python with speech-to-text and text-to-speech features</li>
@@ -373,7 +316,6 @@ export default function Home() {
               </div>
             </article>
 
-            {/* IMAZER */}
             <article className={`${styles.infoCard} ${styles.infoCardTeaching}`}>
               <div className={styles.cardText}>
                 <div className={`${styles.cardTag} ${styles.teachingTag}`}>Python / GUI</div>
@@ -382,9 +324,7 @@ export default function Home() {
                   Image resizing app with a graphical interface
                 </p>
                 <p className={styles.cardDescription}>
-                  IMAZER is a lightweight Python application with a graphical interface
-                  for resizing images quickly and efficiently. It supports multiple
-                  formats and is designed for ease of use.
+                  IMAZER is a lightweight Python application with a graphical interface for resizing images quickly and efficiently. It supports multiple formats and is designed for ease of use.
                 </p>
                 <ul className={styles.bulletList}>
                   <li>Built a GUI for intuitive image resizing</li>
@@ -410,7 +350,7 @@ export default function Home() {
                   poster="/Imazer.jpg"
                   preload="none"
                 >
-                  <source src="/IMAZER_Demo.mp4" type="video/mp4" />
+                  <source src="Video Project 1.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -419,7 +359,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Experience Section */}
       <section id="experience" className={styles.section}>
         <div className={styles.sectionCard}>
           <div className={styles.sectionHeader}>
@@ -430,33 +369,6 @@ export default function Home() {
           </div>
 
           <div className={styles.cardStack}>
-            {/* Current Role - Inflection Medicine
-            <article className={`${styles.infoCard} ${styles.infoCardCurrent}`}>
-              <div className={styles.cardText}>
-                <div className={styles.cardTagRow}>
-                  <div className={`${styles.cardTag} ${styles.currentTag}`}>Current</div>
-                  <div className={`${styles.cardTag} ${styles.productTag}`}>Industry</div>
-                </div>
-                <h3>Software Intern</h3>
-                <p className={styles.cardSubtitle}>
-                  Inflection Medicine · July 2026 – Present
-                </p>
-                <ul className={styles.bulletList}>
-                  <li>Working on AI-driven healthcare solutions</li>
-                  <li>Contributing to software development initiatives</li>
-                  <li>Collaborating with cross-functional teams on product development</li>
-                </ul>
-              </div>
-
-              <div className={styles.cardMedia}>
-                <div className={styles.placeholderImage}>
-                  <span className={styles.placeholderIcon}>💼</span>
-                  <span className={styles.placeholderText}>Inflection Medicine</span>
-                </div>
-              </div>
-            </article> */}
-
-            {/* Research */}
             <article className={`${styles.infoCard} ${styles.infoCardResearch}`}>
               <div className={styles.cardText}>
                 <div className={`${styles.cardTag} ${styles.researchTag}`}>Research</div>
@@ -466,20 +378,13 @@ export default function Home() {
                 </p>
                 <ul className={styles.bulletList}>
                   <li>
-                    Created and analyzed six surgeon-specific ground-truth strategies to
-                    benchmark model performance on the question: "Can AI accurately identify
-                    the expert surgeon?"; evaluated using accuracy, sensitivity, specificity,
-                    and precision. Findings presented at AUPO 2024.
+                    Created and analyzed six surgeon-specific ground-truth strategies to benchmark model performance on the question: "Can AI accurately identify the expert surgeon?"; evaluated using accuracy, sensitivity, specificity, and precision. Findings presented at AUPO 2024.
                   </li>
                   <li>
-                    Curated and preprocessed 30+ cataract surgery videos in collaboration
-                    with clinicians to build high-quality, structured datasets for training
-                    and evaluating deep learning models.
+                    Curated and preprocessed 30+ cataract surgery videos in collaboration with clinicians to build high-quality, structured datasets for training and evaluating deep learning models.
                   </li>
                   <li>
-                    Applied and evaluated deep learning architectures (encoders, decoders)
-                    and metrics (AUC, confusion matrix) for surgical skill assessment,
-                    contributing to clinically relevant advancements in AI-driven surgical evaluation.
+                    Applied and evaluated deep learning architectures (encoders, decoders) and metrics (AUC, confusion matrix) for surgical skill assessment, contributing to clinically relevant advancements in AI-driven surgical evaluation.
                   </li>
                 </ul>
                 <div className={styles.linkRow}>
@@ -504,7 +409,6 @@ export default function Home() {
               </div>
             </article>
 
-            {/* Teaching */}
             <article className={`${styles.infoCard} ${styles.infoCardTeaching}`}>
               <div className={styles.cardText}>
                 <div className={`${styles.cardTag} ${styles.teachingTag}`}>Teaching</div>
@@ -514,18 +418,13 @@ export default function Home() {
                 </p>
                 <ul className={styles.bulletList}>
                   <li>
-                    Guided students in debugging complex programming tasks and simplified
-                    Data Structures concepts into accessible explanations, fostering better
-                    understanding, problem-solving, and technical communication skills.
+                    Guided students in debugging complex programming tasks and simplified Data Structures concepts into accessible explanations, fostering better understanding, problem-solving, and technical communication skills.
                   </li>
                   <li>
-                    Graded over 300 project submissions and 400 exam submissions while
-                    conducting 50+ office hours and collaborating with faculty to create
-                    an inclusive and effective learning environment.
+                    Graded over 300 project submissions and 400 exam submissions while conducting 50+ office hours and collaborating with faculty to create an inclusive and effective learning environment.
                   </li>
                   <li>
-                    Designed rubrics and grading guidelines, and analyzed grading statistics
-                    to ensure consistency in the grading process and provide clear feedback.
+                    Designed rubrics and grading guidelines, and analyzed grading statistics to ensure consistency in the grading process and provide clear feedback.
                   </li>
                 </ul>
                 <div className={styles.linkRow}>
@@ -550,29 +449,20 @@ export default function Home() {
               </div>
             </article>
 
-            {/* Product - RescueReady */}
             <article className={`${styles.infoCard} ${styles.infoCardProduct}`}>
               <div className={styles.cardText}>
                 <div className={`${styles.cardTag} ${styles.productTag}`}>Entrepreneurship</div>
                 <h3>Co-Founder: RescueReady</h3>
-                <p className={styles.cardSubtitle}>
-                  Jan 2025 – Sep 2025
-                </p>
+                <p className={styles.cardSubtitle}>Jan 2025 – Sep 2025</p>
                 <ul className={styles.bulletList}>
                   <li>
-                    Co-founded and led development of an AI-powered EMT training platform
-                    that simulates high-pressure emergency scenarios to enhance decision-making
-                    and situational awareness.
+                    Co-founded and led development of an AI-powered EMT training platform that simulates high-pressure emergency scenarios to enhance decision-making and situational awareness.
                   </li>
                   <li>
-                    Built a full-stack web application using React, TypeScript, and SQLite,
-                    integrating generative AI to generate realistic, protocol-aligned simulations
-                    in collaboration with EMTs and healthcare professionals.
+                    Built a full-stack web application using React, TypeScript, and SQLite, integrating generative AI to generate realistic, protocol-aligned simulations in collaboration with EMTs and healthcare professionals.
                   </li>
                   <li>
-                    Achieved 3rd Place at HopStart General Ventures and won the Pava Center
-                    for Entrepreneurship Award, responsible for product vision, technical
-                    architecture, and user testing.
+                    Achieved 3rd Place at HopStart General Ventures and won the Pava Center for Entrepreneurship Award, responsible for product vision, technical architecture, and user testing.
                   </li>
                 </ul>
                 <div className={styles.linkRow}>
@@ -606,7 +496,6 @@ export default function Home() {
             </article>
           </div>
 
-          {/* Publications */}
           <div className={styles.publications}>
             <h3 className={styles.subSectionTitle}>📚 Posters & Publications</h3>
 
@@ -656,8 +545,7 @@ export default function Home() {
                 <div className={styles.pubLeft}>
                   <span className={`${styles.pubTag} ${styles.paperTag}`}>Paper</span>
                   <span className={styles.pubTitle}>
-                    "A Vision Foundation Model for Cataract Surgery Using Joint-Embedding
-                    Predictive Architecture"
+                    "A Vision Foundation Model for Cataract Surgery Using Joint-Embedding Predictive Architecture"
                   </span>
                 </div>
                 <div className={styles.pubRight}>
@@ -670,7 +558,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
           <div className={styles.footerBrand}>
@@ -700,7 +587,6 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Scroll to Top Button */}
       <button
         className={`${styles.scrollToTop} ${showScrollTop ? styles.scrollToTopVisible : ""}`}
         onClick={scrollToTop}
