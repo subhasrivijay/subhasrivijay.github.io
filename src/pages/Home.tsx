@@ -209,7 +209,7 @@ export default function Home() {
               📄 Open Resume in New Tab
             </a>
             <a
-              href={`${import.meta.env.BASE_URL}Subhasri_Vijay_Resume.pdf`}
+              href={`${import.meta.env.BASE_URL}SVijay_Resume.pdf`}
               download
               className={`${styles.btnBase} ${styles.secondaryBtn}`}
             >
