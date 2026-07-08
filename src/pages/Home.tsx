@@ -201,7 +201,7 @@ export default function Home() {
 
           <div className={styles.resumeActions}>
             <a
-              href={`${import.meta.env.BASE_URL}Subhasri_Vijay_Resume.pdf`}
+              href={`${import.meta.env.BASE_URL}SVijay_Resume.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className={`${styles.btnBase} ${styles.primaryBtn} ${styles.mobilePdfLink}`}
