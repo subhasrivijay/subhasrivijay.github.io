@@ -193,7 +193,7 @@ export default function Home() {
 
           <div className={styles.pdfWrapper}>
             <iframe
-              src={`${import.meta.env.BASE_URL}Subhasri_Vijay_Resume.pdf`}
+              src={`${import.meta.env.BASE_URL}SVijay_Resume.pdf`}
               title="Subhasri Vijay Resume"
               className={styles.resumePdf}
             />
