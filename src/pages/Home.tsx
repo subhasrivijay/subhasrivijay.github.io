@@ -500,12 +500,12 @@ export default function Home() {
             <h3 className={styles.subSectionTitle}>📚 Posters & Publications</h3>
 
             <div className={styles.pubStack}>
-              <a
+              {/* <a
                 href="/AUPO2024.jpg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.pubCard}
-              >
+              > */}
                 <div className={styles.pubLeft}>
                   <span className={`${styles.pubTag} ${styles.posterTag}`}>Poster</span>
                   <span className={styles.pubTitle}>
