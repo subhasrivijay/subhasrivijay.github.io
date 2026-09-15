@@ -193,7 +193,7 @@ export default function Home() {
 
           <div className={styles.pdfWrapper}>
             <iframe
-              src={`${import.meta.env.BASE_URL}SVijay_Resume.pdf`}
+              src={`${import.meta.env.BASE_URL}Subhasri_Vijay_Resume.pdf`}
               title="Subhasri Vijay Resume"
               className={styles.resumePdf}
             />
@@ -201,7 +201,7 @@ export default function Home() {
 
           <div className={styles.resumeActions}>
             <a
-              href={`${import.meta.env.BASE_URL}SVijay_Resume.pdf`}
+              href={`${import.meta.env.BASE_URL}Subhasri_Vijay_Resume.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className={`${styles.btnBase} ${styles.primaryBtn} ${styles.mobilePdfLink}`}
