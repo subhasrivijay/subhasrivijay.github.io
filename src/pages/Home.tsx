@@ -105,18 +105,15 @@ export default function Home() {
 
           <div className={styles.highlights}>
             <div className={styles.highlightItem}>
-              <span className={styles.highlightIcon}>💼</span>
               <span className={styles.highlightText}>
                 Software Intern @ Inflection Medicine
                 <span className={styles.currentBadge}>Current</span>
               </span>
             </div>
             <div className={styles.highlightItem}>
-              <span className={styles.highlightIcon}>🎓</span>
               <span>BS/MSE CS : Johns Hopkins '26</span>
             </div>
             <div className={styles.highlightItem}>
-              <span className={styles.highlightIcon}>🛠️</span>
               <span>AI + Healthcare Researcher</span>
             </div>
           </div>
@@ -206,14 +203,14 @@ export default function Home() {
               rel="noopener noreferrer"
               className={`${styles.btnBase} ${styles.primaryBtn} ${styles.mobilePdfLink}`}
             >
-              📄 Open Resume in New Tab
+              Open Resume in New Tab
             </a>
             <a
               href={`${import.meta.env.BASE_URL}SVijay_Resume.pdf`}
               download
               className={`${styles.btnBase} ${styles.secondaryBtn}`}
             >
-              ⬇️ Download PDF
+              Download PDF
             </a>
           </div>
         </div>
@@ -250,7 +247,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className={styles.inlineLink}
                   >
-                    📰 Article
+                    Article
                   </a>
                   <a
                     href="/RescueReady.png"
@@ -258,7 +255,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className={styles.inlineLink}
                   >
-                    📊 Poster
+                    Poster
                   </a>
                 </div>
               </div>
@@ -298,7 +295,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className={styles.inlineLink}
                   >
-                    💻 GitHub
+                    GitHub
                   </a>
                 </div>
               </div>
@@ -338,7 +335,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className={styles.inlineLink}
                   >
-                    💻 GitHub
+                    GitHub
                   </a>
                 </div>
               </div>
@@ -418,7 +415,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className={styles.inlineLink}
                   >
-                    📊 ISBI Poster
+                    ISBI Poster
                   </a>
                 </div>
               </div>
@@ -458,7 +455,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className={styles.inlineLink}
                   >
-                    🏆 Teaching Award Article
+                    Teaching Award Article
                   </a>
                 </div>
               </div>
@@ -496,7 +493,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className={styles.inlineLink}
                   >
-                    📰 Article
+                    Article
                   </a>
                   <a
                     href="/RescueReady.png"
@@ -504,7 +501,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className={styles.inlineLink}
                   >
-                    📊 Poster
+                    Poster
                   </a>
                 </div>
               </div>
@@ -521,7 +518,7 @@ export default function Home() {
           </div>
 
           <div className={styles.publications}>
-            <h3 className={styles.subSectionTitle}>📚 Posters & Publications</h3>
+            <h3 className={styles.subSectionTitle}>Posters & Publications</h3>
 
             <div className={styles.pubStack}>
               <div className={styles.pubCard}>
@@ -550,7 +547,6 @@ export default function Home() {
                 </div>
                 <div className={styles.pubRight}>
                   <span className={styles.pubVenue}>ISBI 2025</span>
-                  <span className={styles.pubArrow}>→</span>
                 </div>
               </a>
 
@@ -568,7 +564,6 @@ export default function Home() {
                 </div>
                 <div className={styles.pubRight}>
                   <span className={styles.pubVenue}>MIDL 2025</span>
-                  <span className={styles.pubArrow}>→</span>
                 </div>
               </a>
             </div>

@@ -524,10 +524,14 @@
 }
 
 .bulletList li::before {
-  content: '▹';
+  content: '';
   position: absolute;
   left: 0;
-  color: #a78bfa;
+  top: 0.55rem;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #a78bfa;
 }
 
 .linkRow {
