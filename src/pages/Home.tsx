@@ -102,7 +102,7 @@ export default function Home() {
           <h1 className={styles.title}>
             Hi, I&apos;m <span className={styles.name}>Subhasri Vijay</span>
           </h1>
-
+    
           <div className={styles.highlights}>
             <div className={styles.highlightItem}>
               <span className={styles.highlightText}>
@@ -110,14 +110,7 @@ export default function Home() {
                 <span className={styles.currentBadge}>Current</span>
               </span>
             </div>
-            <div className={styles.highlightItem}>
-              <span>BS/MSE CS : Johns Hopkins '26</span>
-            </div>
-            <div className={styles.highlightItem}>
-              <span>AI + Healthcare Researcher</span>
-            </div>
           </div>
-
           <div className={styles.descriptionWrap}>
             <p className={styles.description}>
               A BS/MSE Computer Science graduate from Johns Hopkins University, specializing in Deep Learning with a concentration in Computer Vision. Currently, I'm a Software Intern at Inflection Medicine.
