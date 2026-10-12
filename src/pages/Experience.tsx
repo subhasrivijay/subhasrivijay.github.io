@@ -21,6 +21,30 @@ export default function Experience() {
           <span role="img" aria-label="experience">🧠</span> My Experience
         </h2>
 
+        {/* Inflection Medicine */}
+        <div className={styles.expSection}>
+          <div className={styles.expDetails}>
+            <div className={styles.title}>
+              Software Engineering Intern
+            </div>
+            <div className={styles.subtitle}>
+              Inflection Medicine
+              <span className={styles.duration}>July 2026–Present</span>
+            </div>
+            <ul className={styles.expList}>
+              <li>
+                Engineered gene- and variant-level clinical-findings support in the Test Configuration Service (schema, REST API, validation, and CLI), so seeded orders can generate reports that combine seeded findings with order patient details.
+              </li>
+              <li>
+                Automated the first end-to-end test harness for the Clinical Guidance Engine: a headless “Virtual Clinical Team” that drives the Curation and Guidance portal through APIs on seeded orders.
+              </li>
+              <li>
+                Delivered the first curator-facing view of the Clinical Guidance Engine and PPS audit database, including a reusable audit-history component and a global searchable audit log.
+              </li>
+            </ul>
+          </div>
+        </div>
+
         {/* Cataract Research Assistant */}
         <div className={styles.expSection}>
           <div className={styles.expDetails}>

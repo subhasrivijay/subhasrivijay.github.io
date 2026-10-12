@@ -364,11 +364,35 @@ export default function Home() {
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Experience</h2>
             <p className={styles.sectionSubtitle}>
-              Research, teaching, and product-building experience.
+              Software, research, teaching, and product-building experience.
             </p>
           </div>
 
           <div className={styles.cardStack}>
+            <article className={`${styles.infoCard} ${styles.infoCardWork}`}>
+              <div className={styles.cardText}>
+                <div className={`${styles.cardTag} ${styles.workTag}`}>Software</div>
+                <h3>Software Engineering Intern</h3>
+                <p className={styles.cardSubtitle}>
+                  Inflection Medicine · July 2026 – Present
+                </p>
+                <ul className={styles.bulletList}>
+                  <li>
+                    Engineered gene- and variant-level clinical-findings support in the Test Configuration Service to enable generation of seeded reports combining seededfindings with order patient details. Designed it to stay route-agnostic across lab-fulfillment backends and to support product demos.
+                  </li>
+                  <li>
+                    Automated the end-to-end test harness for the Clinical Guidance Engine: a headless &quot;Virtual Clinical Team&quot; that drives the Curation and Guidance portal through APIs on seeded orders, and runs as a continuous mock whenever a seeded order appears in the dev and demo environments.
+                  </li>
+                  <li>
+                    Delivered the first curator-facing view of the Clinical Guidance Engine and PPS audit database: a reusable audit-history component spanning 16 record types across 8 entity pages, and a global searchable audit log of who changed what, and when.
+                  </li>
+                  <li>
+                    Shipped one-click clinical-trial sync from Databricks and a CSV ingest pipeline, giving curators versioned, up-to-date trial findings with only recruiting trials recommended.
+                  </li>
+                </ul>
+              </div>
+            </article>
+
             <article className={`${styles.infoCard} ${styles.infoCardResearch}`}>
               <div className={styles.cardText}>
                 <div className={`${styles.cardTag} ${styles.researchTag}`}>Research</div>
@@ -500,12 +524,7 @@ export default function Home() {
             <h3 className={styles.subSectionTitle}>📚 Posters & Publications</h3>
 
             <div className={styles.pubStack}>
-              {/* <a
-                href="/AUPO2024.jpg"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.pubCard}
-              > */}
+              <div className={styles.pubCard}>
                 <div className={styles.pubLeft}>
                   <span className={`${styles.pubTag} ${styles.posterTag}`}>Poster</span>
                   <span className={styles.pubTitle}>
@@ -514,9 +533,8 @@ export default function Home() {
                 </div>
                 <div className={styles.pubRight}>
                   <span className={styles.pubVenue}>AUPO 2024</span>
-                  <span className={styles.pubArrow}>→</span>
                 </div>
-              </a>
+              </div>
 
               <a
                 href="/Subhasri_ISBI_2025_Poster.pdf"
